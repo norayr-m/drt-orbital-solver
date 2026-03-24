@@ -55,7 +55,7 @@ canvas { display: block; width: 100vw; height: 100vh; position:absolute; top:0; 
 <div id="status-log"></div>
 
 <div id="controls">
-  <button id="btn-propose">1. QUEEN PROPOSE PROBLEM</button>
+  <button id="btn-propose">1. PROPOSE PROBLEM</button>
   <button id="btn-snap">2. SNAP LOCK (EIGENVECTORS)</button>
   <button id="btn-ribo">3. BACK RIBOSOME PASS (X27)</button>
 </div>
@@ -145,7 +145,7 @@ for (let r=0; r<RANKS-1; r++) {
     });
 }
 
-// === DRT QUEEN TOKENS ===
+// === DRT CORE TOKENS ===
 const tokens = ["[AWAIT]", "[LISTEN]", "[Q_EIGEN]", "[MCP_PARSE]", "[SPARTA]", "[DECODE]"];
 let activeTokens = [];
 
@@ -295,7 +295,7 @@ function render(now) {
         ctx.shadowBlur = 0;
     });
 
-    // Draw Center Queen & Tokens
+    // Draw Center Node & Tokens
     ctx.shadowBlur = 20;
     ctx.shadowColor = '#d0b060';
     ctx.fillStyle = '#fff';
@@ -322,7 +322,7 @@ render(performance.now());
 document.getElementById('btn-propose').addEventListener('click', (e) => {
     e.target.classList.add('active');
     phaseState = 'forward';
-    log("Queen instantiated Socratic geometry. Forward Pass mapping...", "#ff9f0a");
+    log("Instantiated Socratic geometry. Forward Pass mapping...", "#ff9f0a");
     
     // Spawn tokens
     let d = 0;
@@ -370,7 +370,7 @@ document.getElementById('btn-ribo').addEventListener('click', (e) => {
 
     setTimeout(() => {
         activeTokens.push({ text: "[PROBLEM_SOLVED]", life: 5.0, y: -20});
-        log("Decode complete. Result returned to Queen.", "#d0b060");
+        log("Decode complete. Result returned to origin.", "#d0b060");
     }, 3000);
 });
 
