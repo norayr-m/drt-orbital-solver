@@ -1,5 +1,7 @@
 # DRT Orbital Solver
 
+> This is an amateur engineering project. We are not HPC professionals and make no competitive claims.
+
 **Phase 5: Interstellar Orbital Solver.** Observers on orbital paths, projections through gravitational lensing, reconstruction at convergence points. The DRT in celestial mechanics.
 
 Part of the [Distributed Reconstruction Theorem](https://github.com/norayr-m) ecosystem.
